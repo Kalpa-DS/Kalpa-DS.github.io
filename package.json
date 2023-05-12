@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Kalpa-DS.github.io/Squirrel-liquor-hub",
   "name": "e-shop-tutorial",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon backend/server.js",
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "author": "shahriar Sajeeb",
   "license": "ISC",
@@ -24,5 +28,9 @@
     "nodemailer": "^6.9.1",
     "nodemon": "^2.0.20",
     "stripe": "^12.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+    
   }
 }
